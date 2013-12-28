@@ -53,10 +53,10 @@ documentFolderTests() {
         ..documentIds = ['3333', '4444'];
     
     // when
-    String jsonString = JSON.stringify(folder);
+    String jsonString = JSON.encode(folder);
     
     // then
-    DocumentFolder reconvertedFolder = new DocumentFolder.fromJson(JSON.deocde(jsonString));
+    DocumentFolder reconvertedFolder = new DocumentFolder.fromJson(JSON.decode(jsonString));
     expect(reconvertedFolder.id, equals('1111'));
     expect(reconvertedFolder.name, equals('class 2d'));
     expect(reconvertedFolder.parentId, equals('9999'));

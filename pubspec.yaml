@@ -2,14 +2,16 @@ name: doxblox
 version: 0.0.1
 description: web client for doxblox
 dependencies:
-  bootjack: any
+  polymer: any
+  intl: any
+  unittest: any
+  route: any
   event_bus:
     git: https://github.com/marcojakob/dart-event-bus.git
   html5_dnd:
     git: https://github.com/marcojakob/dart-html5-dnd.git
-  intl: any
-  polymer: any
-  route: any
   tree_view:
     git: https://github.com/marcojakob/dart-tree-view.git
-  unittest: any
+transformers:
+- polymer:
+    entry_points: web/index.html

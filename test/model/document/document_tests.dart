@@ -32,7 +32,7 @@ documentTests() {
   
   test('constructorFromJson_EmptyJsonString_ReturnsDocumentWithNullValues', () {
     // when
-    Document document = new Document.fromJson(JSON.parse('{}'));
+    Document document = new Document.fromJson(JSON.decode('{}'));
     
     // then
     expect(document.id, isNull);

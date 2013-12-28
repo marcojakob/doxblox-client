@@ -6,7 +6,8 @@ import 'dart:async';
 import 'package:polymer/polymer.dart';
 import 'package:logging/logging.dart';
 
-// TODO: Change to package: when possible.
+// TODO: Change this to package:tree_view/tree_view.dart. At the moment polymer 
+// doesn't understand that it is the same element that was importet in the html.
 import 'packages/tree_view/tree_view.dart';
 
 import '../../model/model.dart';
@@ -74,6 +75,7 @@ class DocumentTreeElement extends PolymerElement {
   void _applySelection() {
     // Make sure the tree is ready.
     if (root != null) {
+      var t = $['tree'];
       TreeViewElement tree = $['tree'];
       
       if (selectedDoc != null) {
@@ -133,7 +135,7 @@ class DocumentTreeBuilder {
   
   /**
    * Constructs a tree builder for the specified [folders] and [documents]. 
-   * The [folders] must have exactly one root folder, i.e. a folter with 
+   * The [folders] must have exactly one root folder, i.e. a folder with 
    * parentId == null.
    */
   DocumentTreeBuilder(List<DocumentFolder> folders, 

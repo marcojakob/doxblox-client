@@ -6,7 +6,6 @@ import 'dart:async' show Future;
 import 'package:polymer/polymer.dart';
 import 'package:route/client.dart';
 import 'package:logging/logging.dart';
-import 'package:bootjack/bootjack.dart';
 
 import 'ui/widget/split_panel.dart';
 
@@ -24,7 +23,6 @@ class DoxbloxApp extends PolymerElement {
   bool get applyAuthorStyles => true;
   
   DoxbloxApp.created() : super.created() {
-    _initBootjackWidgets();
   }
   
   void enteredView() {
@@ -33,6 +31,8 @@ class DoxbloxApp extends PolymerElement {
     _initMainLayout();
     
     _initRouter();
+    
+    _initDropdownWidget();
   }
   
   void _initMainLayout() {
@@ -92,11 +92,10 @@ class DoxbloxApp extends PolymerElement {
       ..listen(ignoreClick: true);
   }
   
-  /// Initializes the Bootstrap widgets that need some Dart code to work.
-  void _initBootjackWidgets() {
-    _log.info('Initializing bootjack widgets.');
+  /// Initializes the dropdown widgets that need some Dart code to work.
+  void _initDropdownWidget() {
+    _log.info('Initializing dropdown widget.');
     
-    Dropdown.use();
     // Prevent default action for click events on dropdown-toggles.
     // Otherwise the link to "#" is followed by the browser.
     List<Element> dropdownToggles = shadowRoot.querySelectorAll('.dropdown-toggle');
