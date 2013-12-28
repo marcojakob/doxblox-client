@@ -1,0 +1,10 @@
+.settings/
+.idea/
+.project
+.buildlog
+packages/
+build/
+pubspec.lock
+*.iml
+*.ipr
+*.iws

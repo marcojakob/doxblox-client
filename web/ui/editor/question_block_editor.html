@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+<link rel="import" href="text_question_editor.html">
+
+<polymer-element name="doxblox-question-block-editor">
+  <template>
+    <style>
+      @host {
+        :scope {
+          display: block;
+        }
+      }
+    </style>
+    
+    <template repeat="{{question in questionBlock.questions | enumerate}}">
+      <div is="doxblox-text-question-editor" question="{{question.value}}" index="{{question.index}}">
+      </div>
+    </template>
+  </template>
+  
+  <script type="application/dart" src="question_block_editor.dart"></script>
+</polymer-element>
