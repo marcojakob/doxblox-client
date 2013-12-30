@@ -1,6 +1,6 @@
 part of doxblox.mock_data;
 
-class MockDocumentBlockDao extends MockDao implements DocumentBlockDao {
+class MockDocumentBlockDao extends MockDao<DocumentBlock> implements DocumentBlockDao {
   
   MockDocumentBlockDao() {
     

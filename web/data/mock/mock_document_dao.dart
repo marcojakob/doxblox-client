@@ -1,6 +1,6 @@
 part of doxblox.mock_data;
 
-class MockDocumentDao extends MockDao implements DocumentDao {
+class MockDocumentDao extends MockDao<Document> implements DocumentDao {
   
   MockDocumentDao() {
     data[newId()] = new Document()

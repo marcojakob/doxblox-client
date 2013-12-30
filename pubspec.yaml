@@ -10,8 +10,14 @@ dependencies:
     git: https://github.com/marcojakob/dart-event-bus.git
   html5_dnd:
     git: https://github.com/marcojakob/dart-html5-dnd.git
-  tree_view:
-    git: https://github.com/marcojakob/dart-tree-view.git
+  makery_ui_assets:
+    git: https://github.com/marcojakob/dart-makery-ui-assets.git
+  makery_ui_split_panel:
+    git: https://github.com/marcojakob/dart-makery-ui-split-panel.git
+  makery_ui_tree_view:
+    git: https://github.com/marcojakob/dart-makery-ui-tree-view.git
+  widget:
+    git: https://github.com/dart-lang/widget.dart.git
 transformers:
 - polymer:
     entry_points: web/index.html

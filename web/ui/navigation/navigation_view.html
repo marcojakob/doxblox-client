@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
 <link rel="import" href="document_tree.html">
+<link rel="import" href="packages/widget/components/dropdown.html">
 
 <polymer-element name="doxblox-navigation-view">
   <template>
@@ -10,22 +11,65 @@
           display: block;
           overflow: auto;
           height: 100%;
-          padding-left: 5px;
-          padding-right: 5px;
           background-color: #eaedef;
         }
       }
     </style>
     
-    <h5>Libraries</h5>
-    <ul class="unstyled">
-      <li><a href="#">Public Library</a></li>
-      <li><a href="#">Private Library</a></li>
-    </ul>
-    <h5>Documents</h5>
+    <div class="col-12">
+      <div class="row">
+        <div class="col-12">
+          <h5><strong>Libraries</strong></h5>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <ul class="list-unstyled">
+            <li><a href="#">Public Library</a></li>
+            <li><a href="#">Private Library</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col-12">
+          <h5><strong>Documents</strong></h5>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <p>
+            <button type="button" class="btn btn-default"><i class="fa fa-folder fa-fw"></i> New Folder</button>
+          </p>
+          <p>
+            <button type="button" class="btn btn-default"><i class="fa fa-file-o fa-fw"></i> New Document</button>
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <doxblox-document-tree id="document-tree">
+          </doxblox-document-tree>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <dropdown-widget class="btn-group">
+            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+              New <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="#">Action</a></li>
+              <li><a href="#">Another action</a></li>
+              <li><a href="#">Something else here</a></li>
+              <li class="divider"></li>
+              <li><a href="#">Separated link</a></li>
+            </ul>
+          </dropdown-widget>
+        </div>
+      </div>
+    </div>
     
-    <doxblox-document-tree id="document-tree">
-    </doxblox-document-tree>
   </template>
   
   <script type="application/dart" src="navigation_view.dart"></script>

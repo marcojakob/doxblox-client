@@ -8,7 +8,7 @@ import 'package:logging/logging.dart';
 
 // TODO: Change this to package:tree_view/tree_view.dart. At the moment polymer 
 // doesn't understand that it is the same element that was importet in the html.
-import 'packages/tree_view/tree_view.dart';
+import 'packages/makery_ui_tree_view/tree_view.dart';
 
 import '../../model/model.dart';
 import '../../events.dart' as events;
@@ -106,8 +106,15 @@ class DocumentTreeItem extends TreeItem<Document> {
   DocumentTreeItem(Document data, {TreeItem parent}) : 
     super(data, parent: parent, isLeaf: true);
   
-  String get type => 'document'; 
+  @observable
   String get name => data.name; 
+  
+  List<String> get toggleIconStyles => ['fa', 'fa-caret-right'];
+  List<String> get toggleIconExpandedStyles => ['fa', 'fa-caret-down'];
+
+  List<String> get itemIconStyles => ['fa', 'fa-file-o'];
+  List<String> get itemIconExpandedStyles => ['fa', 'fa-file-o'];
+  List<String> get itemIconLoadingStyles => ['fa', 'fa-spinner', 'fa-spin'];
 }
 
 /**
@@ -118,8 +125,15 @@ class FolderTreeItem extends TreeItem<DocumentFolder> {
   FolderTreeItem(DocumentFolder data, {TreeItem parent: null, bool isLeaf: true}) : 
     super(data, parent: parent, isLeaf: isLeaf);
   
-  String get type => 'folder'; 
+  @observable
   String get name => data.name; 
+  
+  List<String> get toggleIconStyles => ['fa', 'fa-caret-right'];
+  List<String> get toggleIconExpandedStyles => ['fa', 'fa-caret-down'];
+
+  List<String> get itemIconStyles => ['fa', 'fa-folder'];
+  List<String> get itemIconExpandedStyles => ['fa', 'fa-folder-open'];
+  List<String> get itemIconLoadingStyles => ['fa', 'fa-spinner', 'fa-spin'];
 }
 
 /**

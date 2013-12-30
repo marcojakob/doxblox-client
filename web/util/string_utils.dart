@@ -1,5 +1,5 @@
 /// Some general String utility methods.
-library string_utils;
+library doxblox.string_utils;
 
 /**
  * Trims the given String [str] to the specified [size]. 

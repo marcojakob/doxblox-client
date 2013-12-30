@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<link rel="import" href="packages/tree_view/tree_view.html">
+<link rel="import" href="packages/makery_ui_tree_view/tree_view.html">
 
 <polymer-element name="doxblox-document-tree">
   <template>
@@ -12,8 +12,8 @@
       }
     </style>
     
-    <tree-view id="tree" root="{{root}}">
-    </tree-view>
+    <tree-view-element id="tree" root="{{root}}">
+    </tree-view-element>
   </template>
   
   <script type="application/dart" src="document_tree.dart"></script>

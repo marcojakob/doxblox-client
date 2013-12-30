@@ -7,7 +7,7 @@ import 'package:polymer/polymer.dart';
 import 'package:route/client.dart';
 import 'package:logging/logging.dart';
 
-import 'ui/widget/split_panel.dart';
+import 'package:makery_ui_split_panel/split_panel.dart';
 
 import 'model/model.dart';
 
@@ -20,6 +20,8 @@ final _log = new Logger("doxblox.app");
 @CustomTag('doxblox-app')
 class DoxbloxApp extends PolymerElement {
   
+  /// Let styles defined in the author's document "bleed" trough to the Shadow 
+  /// DOM. Necessary for Boostrap styles.
   bool get applyAuthorStyles => true;
   
   DoxbloxApp.created() : super.created() {
